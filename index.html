@@ -1,0 +1,548 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <script src="Folder/s1ClassHehe.js"></script>
+    <style>
+        button {
+            background-color: black;
+            border: 4px;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 12px;
+            transition: transform 0.2s ease-in-out;
+        }
+        body {
+            transition: background-color 0.5s ease;
+        }
+
+        button:hover {
+            transform: scale(1.1)
+        }
+
+        button:active {
+        transform: scale(0.85);
+        transition: transform 0.1s ease;
+        }
+        
+        
+        .red-buttons {
+            background-color: red;
+        }
+        .yellow-buttons {
+            background-color: goldenrod;
+        }
+        .blue-buttons {
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <audio id="click-sound" src="Goodie bag/click.mp3" preload="auto"></audio>
+    <audio id="correct-sound" src="Goodie bag/correct.mp3" preload="auto"></audio>
+    <audio id="incorrect-sound" src="Goodie bag/incorrect.mp3" preload="auto"></audio>
+    <audio id="fart-sound" src="Goodie bag/fart.mp3" preload="auto"></audio>
+    <p id="message">Unchanged message</p>
+    <button type="button" onclick="playClickSFX(), goToGoogleWebsite()">Search Google!!</button><br><br>
+    <button type="button" onclick="playClickSFX(), visitQuincyCoders()">Visit Quincy Coders website :D</button><br><br>
+    
+    <p>Buttons to change the message are below!</p>
+
+    <button type="button" onclick="playClickSFX(), changeMessageHi()">Change message to "Hello"</button><br><br>
+    <button type="button" onclick="playClickSFX(), changeMessageBye()">Change message to "Bye"</button><br><br>
+    <button type="button" onclick="playClickSFX(), changeMessageMoneyBags()">Change message to "Uncle Money Bags"</button><br><br>
+    <input type="text" name="customMessage" placeholder="Add a custom message!">
+    <button type="button" onclick="playClickSFX(), checkCustomMessage()">Submit</button>
+
+    <h5>What color would you like this website's background color to be?</h5>
+    <input type="radio" name="colorChoice" value="red" id="option1" onclick="playClickSFX(), checkChoice()">
+    <label for="option1">Red</label><br>
+
+    <input type="radio" name="colorChoice" value="orange" id="option2" onclick="playClickSFX(), checkChoice()">
+    <label for="option2">Orange</label><br>
+
+    <input type="radio" name="colorChoice" value="yellow" id="option3" onclick="playClickSFX(), checkChoice()">
+    <label for="option3">Yellow</label><br>
+
+    <input type="radio" name="colorChoice" value="green" id="option4" onclick="playClickSFX(), checkChoice()">
+    <label for="option4">Green</label><br>
+
+    <input type="radio" name="colorChoice" value="blue" id="option5" onclick="playClickSFX(), checkChoice()">
+    <label for="option5">Blue</label><br>
+
+    <input type="radio" name="colorChoice" value="purple" id="option6" onclick="playClickSFX(), checkChoice()">
+    <label for="option6">Purple</label><br>
+
+    <input type="radio" name="colorChoice" value="white" id="option7" onclick="playClickSFX(), checkChoice()">
+    <label for="option7">White</label><br>
+
+    <input type="radio" name="colorChoice" value="lights-off" id="option8" onclick="playClickSFX(), checkChoice()">
+    <label for="option8">Lights off</label><br>
+
+    <h3>Easy level quizzes 👇🔵</h3>
+
+    <h5>Quiz 1: What is the Capital of France?🔵</h5>
+    <input type="text" name="userAnswer" placeholder="Enter your answer here!">
+    <button type="button" class="blue-buttons" onclick="playClickSFX(), checkAnswer1()">Submit</button>
+
+    <h5>Quiz 2: What is the Capital of Germany?🔵</h5>
+    <input type="text" name="userAnswer" placeholder="Enter your answer here!">
+    <button type="button" class="blue-buttons" onclick="playClickSFX(), checkAnswer2()">Submit</button>
+
+    <h5>Quiz 3: What is the Capital of Italy?🔵</h5>
+    <input type="text" name="userAnswer" placeholder="Enter your answer here!">
+    <button type="button" class="blue-buttons" onclick="playClickSFX(), checkAnswer3()">Submit</button>
+
+    <h5>Quiz 4: What is the Capital of Russia?🔵</h5>
+    <input type="text" name="userAnswer" placeholder="Enter your answer here!">
+    <button type="button" class="blue-buttons" onclick="playClickSFX(), checkAnswer4()">Submit</button>
+
+    <h5>Quiz 5: What is the Capital of China?🔵</h5>
+    <input type="text" name="userAnswer" placeholder="Enter your answer here!">
+    <button type="button" class="blue-buttons" onclick="playClickSFX(), checkAnswer5()">Submit</button><br><br>
+
+    <h3>Medium level quizzes 👇🟡</h3>
+
+    <h5>Quiz 6: Germany invaded _____ to start WWII🟡</h5>
+    <input type="text" name="userAnswer" placeholder="Enter your answer here!">
+    <button type="button" class="yellow-buttons" onclick="playClickSFX(), checkAnswer6()">Submit</button>
+
+    <h5>Quiz 7: What country has the weakest military?🟡</h5>
+    <input type="text" name="userAnswer" placeholder="Enter your answer here!">
+    <button type="button" class="yellow-buttons" onclick="playClickSFX(), checkAnswer7()">Submit</button>
+
+    <h5>Quiz 8: What is the most populated country?🟡</h5>
+    <input type="text" name="userAnswer" placeholder="Enter your answer here!">
+    <button type="button" class="yellow-buttons" onclick="playClickSFX(), checkAnswer8()">Submit</button>
+
+    <h5>Quiz 9: What is the boiling point of water in fahrenhiet?🟡</h5>
+    <input type="text" name="userAnswer" placeholder="Enter your answer here!">
+    <button type="button" class="yellow-buttons" onclick="playClickSFX(), checkAnswer9()">Submit</button>
+
+    <h5>Quiz 10: What is the temperature of liquid nitrogen in fahrenhiet?🟡</h5>
+    <input type="text" name="userAnswer" placeholder="Enter your answer here!">
+    <button type="button" class="yellow-buttons" onclick="playClickSFX(), checkAnswer10()">Submit</button><br><br>
+
+    <h3>Hard level quizzes 👇🔴</h3>
+
+    <h5>Quiz 11: What type of peace treaty was signed to end the Korean War?🔴</h5>
+    <input type="text" name="userAnswer" placeholder="Enter your answer here!">
+    <button type="button" class="red-buttons" onclick="playClickSFX(), checkAnswer11()">Submit</button>
+
+    <h5>Quiz 12: Japan was stopped in WWII with a(n) ___________🔴</h5>
+    <input type="text" name="userAnswer" placeholder="Enter your answer here!">
+    <button type="button" class="red-buttons" onclick="playClickSFX(), checkAnswer12()">Submit</button>
+
+    <h5>Quiz 13: What is the smallest country?🔴</h5>
+    <input type="text" name="userAnswer" placeholder="Enter your answer here!">
+    <button type="button" class="red-buttons" onclick="playClickSFX(), checkAnswer13()">Submit</button>
+
+    <h5>Quiz 14: What gets wetter the more it dries?🔴</h5>
+    <input type="text" name="userAnswer" placeholder="Enter your answer here!">
+    <button type="button" class="red-buttons" onclick="playClickSFX(), checkAnswer14()">Submit</button>
+
+    <h5>Quiz 15: What starts with an E, ends with an E, but only has one letter?🔴</h5>
+    <input type="text" name="userAnswer" placeholder="Enter your answer here!">
+    <button type="button" class="red-buttons" onclick="playClickSFX(), checkAnswer15()">Submit</button><br><br>
+    
+    <script>
+        function playClickSFX(){
+            let audio = document.getElementById("click-sound");
+            audio.pause();
+            audio.currentTime = 0;
+            audio.play();
+        }
+        
+        function playCorrectSFX(){
+            document.getElementById("correct-sound").play();
+        }
+
+        function playIncorrectSFX(){
+            document.getElementById("incorrect-sound").play();
+        }
+
+        function playFartSFX(){
+            document.getElementById("fart-sound").play();
+        }
+
+        function checkChoice(){
+            const options = document.getElementsByName("colorChoice");
+            let selectedChoice;
+
+            for (let option of options) {
+                if (option.checked) {
+                    selectedChoice = option.value;
+                }
+            }
+
+            if (selectedChoice === "red") {
+                document.body.style.backgroundColor = 'red';
+            } else if (selectedChoice === "orange") {
+                document.body.style.backgroundColor = 'orange';
+            } else if (selectedChoice === "yellow"){
+                document.body.style.backgroundColor = 'yellow';
+            } else if (selectedChoice === "green"){
+                document.body.style.backgroundColor = 'green';
+            } else if (selectedChoice === "blue"){
+                document.body.style.backgroundColor = 'blue';
+            } else if (selectedChoice === "purple"){
+                document.body.style.backgroundColor = 'purple';
+            } else if (selectedChoice === "white"){
+                document.body.style.backgroundColor = 'white';
+            } else {
+                document.body.style.backgroundColor = 'black';
+            }
+        }
+        
+        function checkCustomMessage(){
+            let customMessage = document.getElementsByName("customMessage")[0].value
+            document.getElementById("message").innerText = customMessage;
+        }
+
+        function checkAnswer1(){
+            const quizAnswer = 'Paris';
+            let userResponse = document.getElementsByName("userAnswer")[0].value
+            let originalColor = document.body.style.backgroundColor;
+            if (userResponse == quizAnswer) {
+                playCorrectSFX();
+                document.body.style.backgroundColor = 'green';
+                setTimeout(() => {
+                    document.body.style.backgroundColor = originalColor
+                }, 300);
+            } else if (userResponse == 'paris'){
+                playFartSFX();
+                document.body.style.backgroundColor = 'yellow';
+                alert('Almost there! Just remember to capitalize the first letter for proper nouns! 😉')
+                setTimeout(() => {
+                    document.body.style.backgroundColor = originalColor
+                }, 300);
+            } else {
+                playIncorrectSFX();
+                document.body.style.backgroundColor = 'red';
+                setTimeout(() => {
+                    document.body.style.backgroundColor = originalColor
+                }, 300);
+            }
+        }
+        
+        function checkAnswer2(){
+            const quizAnswer = 'Berlin';
+            let userResponse = document.getElementsByName("userAnswer")[1].value
+            let originalColor = document.body.style.backgroundColor;
+            if (userResponse == quizAnswer) {
+                playCorrectSFX();
+                document.body.style.backgroundColor = 'green';
+                setTimeout(() => {
+                    document.body.style.backgroundColor = originalColor
+                }, 300);
+            } else if (userResponse == 'berlin'){
+                playFartSFX();
+                alert('Almost there! Just remember to capitalize the first letter for proper nouns! 😉')
+            } else {
+                playIncorrectSFX();
+                document.body.style.backgroundColor = 'red';
+                setTimeout(() => {
+                    document.body.style.backgroundColor = originalColor
+                }, 300);
+            }
+        }
+
+        function checkAnswer3(){
+            const quizAnswer = 'Rome';
+            let userResponse = document.getElementsByName("userAnswer")[2].value
+            let originalColor = document.body.style.backgroundColor;
+            if (userResponse == quizAnswer) {
+                playCorrectSFX();
+                document.body.style.backgroundColor = 'green';
+                setTimeout(() => {
+                    document.body.style.backgroundColor = originalColor
+                }, 300);
+            } else if (userResponse == 'rome'){
+                playFartSFX();
+                document.body.style.backgroundColor = 'yellow';
+                alert('Almost there! Just remember to capitalize the first letter for proper nouns! 😉')
+                setTimeout(() => {
+                    document.body.style.backgroundColor = originalColor
+                }, 300);
+            } else {
+                playIncorrectSFX();
+                document.body.style.backgroundColor = 'red';
+                setTimeout(() => {
+                    document.body.style.backgroundColor = originalColor
+                }, 300);
+            }
+        }
+
+        function checkAnswer4(){
+            const quizAnswer = 'Moscow';
+            let userResponse = document.getElementsByName("userAnswer")[3].value
+            let originalColor = document.body.style.backgroundColor;
+            if (userResponse == quizAnswer) {
+                playCorrectSFX();
+                document.body.style.backgroundColor = 'green';
+                setTimeout(() => {
+                    document.body.style.backgroundColor = originalColor
+                }, 300);
+            } else if (userResponse == 'moscow'){
+                playFartSFX();
+                document.body.style.backgroundColor = 'yellow';
+                alert('Almost there! Just remember to capitalize the first letter for proper nouns! 😉')
+                setTimeout(() => {
+                    document.body.style.backgroundColor = originalColor
+                }, 300);
+            } else {
+                playIncorrectSFX();
+                document.body.style.backgroundColor = 'red';
+                setTimeout(() => {
+                    document.body.style.backgroundColor = originalColor
+                }, 300);
+            }
+        }
+
+        function checkAnswer5(){
+            const quizAnswer = 'Beijing';
+            let userResponse = document.getElementsByName("userAnswer")[4].value
+            let originalColor = document.body.style.backgroundColor;
+            if (userResponse == quizAnswer) {
+                playCorrectSFX();
+                document.body.style.backgroundColor = 'green';
+                setTimeout(() => {
+                    document.body.style.backgroundColor = originalColor
+                }, 300);
+            } else if (userResponse == 'beijing'){
+                playFartSFX();
+                document.body.style.backgroundColor = 'yellow';
+                alert('Almost there! Just remember to capitalize the first letter for proper nouns! 😉')
+                setTimeout(() => {
+                    document.body.style.backgroundColor = originalColor
+                }, 300);
+            } else {
+                playIncorrectSFX();
+                document.body.style.backgroundColor = 'red';
+                setTimeout(() => {
+                    document.body.style.backgroundColor = originalColor
+                }, 300);
+            }
+        }
+
+        function checkAnswer6(){
+            const quizAnswer = 'Poland';
+            let userResponse = document.getElementsByName("userAnswer")[5].value
+            let originalColor = document.body.style.backgroundColor;
+            if (userResponse == quizAnswer) {
+                playCorrectSFX();
+                document.body.style.backgroundColor = 'green';
+                setTimeout(() => {
+                    document.body.style.backgroundColor = originalColor
+                }, 300);
+            } else if (userResponse.toLowerCase() == quizAnswer.toLowerCase()){
+                playFartSFX();
+                document.body.style.backgroundColor = 'yellow';
+                alert('Almost there! Just remember to capitalize the first letter for proper nouns! 😉')
+                setTimeout(() => {
+                    document.body.style.backgroundColor = originalColor
+                }, 300);
+            } else {
+                playIncorrectSFX();
+                document.body.style.backgroundColor = 'red';
+                setTimeout(() => {
+                    document.body.style.backgroundColor = originalColor
+                }, 300);
+            }
+        }
+
+        function checkAnswer7(){
+            const quizAnswer = 'Bhutan';
+            let userResponse = document.getElementsByName("userAnswer")[6].value
+            let originalColor = document.body.style.backgroundColor;
+            if (userResponse == quizAnswer) {
+                playCorrectSFX();
+                document.body.style.backgroundColor = 'green';
+                setTimeout(() => {
+                    document.body.style.backgroundColor = originalColor
+                }, 300);
+            } else if (userResponse.toLowerCase() == quizAnswer.toLowerCase()) {
+                playFartSFX();
+                document.body.style.backgroundColor = 'yellow';
+                alert('Almost there! Just remember to capitalize the first letter for proper nouns! 😉')
+                setTimeout(() => {
+                    document.body.style.backgroundColor = originalColor
+                }, 300);
+            } else {
+                playIncorrectSFX();
+                document.body.style.backgroundColor = 'red';
+                setTimeout(() => {
+                    document.body.style.backgroundColor = originalColor
+                }, 300);
+            }
+        }
+
+        function checkAnswer8(){
+            const quizAnswer = 'China';
+            let userResponse = document.getElementsByName("userAnswer")[7].value
+            let originalColor = document.body.style.backgroundColor;
+            if (userResponse == quizAnswer) {
+                playCorrectSFX();
+                document.body.style.backgroundColor = 'green';
+                setTimeout(() => {
+                    document.body.style.backgroundColor = originalColor
+                }, 300);
+            } else if (userResponse.toLowerCase() == quizAnswer.toLowerCase()) {
+                playFartSFX();
+                document.body.style.backgroundColor = 'yellow';
+                alert('Almost there! Just remember to capitalize the first letter for proper nouns! 😉')
+                setTimeout(() => {
+                    document.body.style.backgroundColor = originalColor
+                }, 300);
+            } else {
+                playIncorrectSFX();
+                document.body.style.backgroundColor = 'red';
+                setTimeout(() => {
+                    document.body.style.backgroundColor = originalColor
+                }, 300);
+            }
+        }
+
+        function checkAnswer9(){
+            const quizAnswer = '212';
+            let userResponse = document.getElementsByName("userAnswer")[8].value
+            let originalColor = document.body.style.backgroundColor;
+            if (userResponse == quizAnswer) {
+                playCorrectSFX();
+                document.body.style.backgroundColor = 'green';
+                setTimeout(() => {
+                    document.body.style.backgroundColor = originalColor
+                }, 300);
+            } else {
+                playIncorrectSFX();
+                document.body.style.backgroundColor = 'red';
+                setTimeout(() => {
+                    document.body.style.backgroundColor = originalColor
+                }, 300);
+            }
+        }
+
+        function checkAnswer10(){
+            const quizAnswer1 = '-320';
+            const quizAnswer2 = '-321';
+            let userResponse = document.getElementsByName("userAnswer")[9].value
+            let originalColor = document.body.style.backgroundColor;
+            if (userResponse == quizAnswer1 || userResponse == quizAnswer2) {
+                playCorrectSFX();
+                document.body.style.backgroundColor = 'green';
+                setTimeout(() => {
+                    document.body.style.backgroundColor = originalColor
+                }, 300);
+            } else {
+                playIncorrectSFX();
+                document.body.style.backgroundColor = 'red';
+                setTimeout(() => {
+                    document.body.style.backgroundColor = originalColor
+                }, 300);
+            }
+        }
+
+        function checkAnswer11(){
+            const quizAnswer = 'armistice'
+            let userResponse = document.getElementsByName("userAnswer")[10].value
+            let originalColor = document.body.style.backgroundColor;
+            if (userResponse.toLowerCase() == quizAnswer) {
+                playCorrectSFX();
+                document.body.style.backgroundColor = 'green';
+                setTimeout(() => {
+                    document.body.style.backgroundColor = originalColor
+                }, 300);
+            } else {
+                playIncorrectSFX();
+                document.body.style.backgroundColor = 'red';
+                setTimeout(() => {
+                    document.body.style.backgroundColor = originalColor
+                }, 300);
+            }
+        }
+
+        function checkAnswer12(){
+            const quizAnswer = 'atomic bomb';
+            let userResponse = document.getElementsByName("userAnswer")[11].value
+            let originalColor = document.body.style.backgroundColor;
+            if (userResponse.toLowerCase() == quizAnswer) {
+                playCorrectSFX();
+                document.body.style.backgroundColor = 'green';
+                setTimeout(() => {
+                    document.body.style.backgroundColor = originalColor
+                }, 300);
+            } else {
+                playIncorrectSFX();
+                document.body.style.backgroundColor = 'red';
+                setTimeout(() => {
+                    document.body.style.backgroundColor = originalColor
+                }, 300);
+            }
+        }
+
+        function checkAnswer13(){
+            const quizAnswer = 'Vatican City'
+            let userResponse = document.getElementsByName("userAnswer")[12].value
+            let originalColor = document.body.style.backgroundColor;
+            if (userResponse == quizAnswer){
+                playCorrectSFX();
+                document.body.style.backgroundColor = 'green';
+                setTimeout(() => {
+                    document.body.style.backgroundColor = originalColor
+                }, 300);
+            } else if (userResponse.toLowerCase() == quizAnswer.toLowerCase()) {
+                playFartSFX();
+                document.body.style.backgroundColor = 'yellow';
+                alert('Almost there! Just remember to capitalize the first letter for proper nouns! 😉')
+                setTimeout(() => {
+                    document.body.style.backgroundColor = originalColor
+                }, 300);
+            } else {
+                playIncorrectSFX();
+                document.body.style.backgroundColor = 'red';
+                setTimeout(() => {
+                    document.body.style.backgroundColor = originalColor
+                }, 300);
+            }
+        }
+
+        function checkAnswer14(){
+            const quizAnswer = 'towel';
+            let userResponse = document.getElementsByName("userAnswer")[13].value
+            let originalColor = document.body.style.backgroundColor;
+            if (userResponse.toLowerCase() == quizAnswer) {
+                playCorrectSFX();
+                document.body.style.backgroundColor = 'green';
+                setTimeout(() => {
+                    document.body.style.backgroundColor = originalColor;
+                }, 300);
+            } else {
+                playIncorrectSFX();
+                document.body.style.backgroundColor = 'red';
+                setTimeout(() => {
+                    document.body.style.backgroundColor = originalColor;
+                }, 300);
+            }
+        }
+
+        function checkAnswer15(){
+            const quizAnswer = 'envelope';
+            let userResponse = document.getElementsByName("userAnswer")[14].value;
+            let originalColor = document.body.style.backgroundColor;
+            if (userResponse.toLowerCase() == quizAnswer) {
+                playCorrectSFX();
+                document.body.style.backgroundColor = 'green';
+                setTimeout(() => {
+                    document.body.style.backgroundColor = originalColor;
+                }, 300);
+            } else {
+                playIncorrectSFX();
+                document.body.style.backgroundColor = 'red';
+                setTimeout(() => {
+                    document.body.style.backgroundColor = originalColor;
+                }, 300);
+            }
+        }
+    </script>
+</body>
+</html>
