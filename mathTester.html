@@ -1,0 +1,160 @@
+<!-- Maintenance Page
+<h1 style="text-align: center; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">Sorry, but the website is down for maintenance🔨 (Upgrades for V1.3 are underway! 😀)</h1>
+-->
+
+<!-- Bug Fixing Underway Page
+<h1 style="text-align: center; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">Sorry, but the website has encountered errors and fixes need to be made🛠️. We are sorry for the inconvenience😔</h1>
+-->
+
+<!-- Server Error Page
+<h1 style="text-align: center; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">Sorry, but the server is not avaliable at this moment. We are sorry for the inconvenience😔</h1>
+-->
+<!DOCTYPE html>
+<p style="position: fixed; top: 0; right: 0; margin: 10px;">©2024 crazyWebsite V1.3.0 -Shadowvenatrix</p>
+<html>
+    <head>
+        <title>Math Tester</title>
+        <link rel="stylesheet" href="/Goodie bag/myStyle.css">
+        <style>
+            body {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Math Tester</h1>
+        <select id="grade">
+            <option value="PK">Pre-K</option>
+            <option value="K">Kindergarten</option>
+            <option value="1">1st Grade</option>
+            <option value="2">2nd Grade</option>
+            <option value="3">3rd Grade</option>
+            <option value="4">4th Grade</option>
+            <option value="5">5th Grade</option>
+            <option value="6">6th Grade</option>
+            <option value="7">7th Grade</option>
+            <option value="8">8th Grade</option>
+        </select>
+        <button id="start" onclick="generateQuestion()">Start</button>
+        <h3>Question: <span id="question"></span></h3>
+        <input type="text" id="answer" placeholder="Enter your answer">
+        <button onclick="checkAnswer()">Submit</button>
+        <script>
+            function generateQuestion() {
+                let grade = document.getElementById("grade").value;
+                let question = document.getElementById("question");
+                let num1;
+                let num2;
+                let operation;
+
+                if (grade === "PK") {
+                    num1 = Math.floor(Math.random() * 10);
+                    num2 = Math.floor(Math.random() * 10);
+                    operation = "+";
+                } else if (grade === "K") {
+                    num1 = Math.floor(Math.random() * 15);
+                    num2 = Math.floor(Math.random() * 15);
+                    operation = Math.random() < 0.5 ? "+" : "-";
+                } else if (grade === "1") {
+                    num1 = Math.floor(Math.random() * 20);
+                    num2 = Math.floor(Math.random() * 20);
+                    operation = Math.random() < 0.7 ? "+" : "-";
+                } else if (grade === "2") {
+                    num1 = Math.floor(Math.random() * 50);
+                    num2 = Math.floor(Math.random() * 50);
+                    operation = Math.random() < 0.6 ? "+" : "-";
+                } else if (grade === "3") {
+                    num1 = Math.floor(Math.random() * 100);
+                    num2 = Math.floor(Math.random() * 100);
+                    let ops = ["+", "-", "*"];
+                    operation = ops[Math.floor(Math.random() * ops.length)];
+                } else if (grade === "4") {
+                    num1 = Math.floor(Math.random() * 1000);
+                    num2 = Math.floor(Math.random() * 100);
+                    let ops = ["+", "-", "*", "/"];
+                    operation = ops[Math.floor(Math.random() * ops.length)];
+                    if (operation === "/") {
+                        num1 = num1 - (num1 % num2); // Ensure clean division
+                    }
+                } else if (grade === "5") {
+                    num1 = Math.floor(Math.random() * 1000);
+                    num2 = Math.floor(Math.random() * 100);
+                    let ops = ["+", "-", "*", "/"];
+                    operation = ops[Math.floor(Math.random() * ops.length)];
+                    if (operation === "/") {
+                        num1 = num1 - (num1 % num2); // Ensure clean division
+                    }
+                } else if (grade === "6") {
+                    num1 = Math.floor(Math.random() * 1000);
+                    num2 = Math.floor(Math.random() * 100);
+                    let ops = ["+", "-", "*", "/", "**"];
+                    operation = ops[Math.floor(Math.random() * ops.length)];
+                    if (operation === "/") {
+                        num1 = num1 - (num1 % num2); // Ensure clean division
+                    }
+                    if (operation === "**") {
+                        num2 = Math.floor(Math.random() * 3) + 2; // Keep exponents reasonable
+                    }
+                } else if (grade === "7") {
+                    num1 = Math.floor(Math.random() * 1000);
+                    num2 = Math.floor(Math.random() * 100);
+                    let ops = ["+", "-", "*", "/", "**"];
+                    operation = ops[Math.floor(Math.random() * ops.length)];
+                    if (operation === "/") {
+                        num1 = num1 - (num1 % num2); // Ensure clean division
+                    }
+                    if (operation === "**") {
+                        num2 = Math.floor(Math.random() * 3) + 2; // Keep exponents reasonable
+                    }
+                } else if (grade === "8") {
+                    num1 = Math.floor(Math.random() * 1000);
+                    num2 = Math.floor(Math.random() * 100);
+                    let ops = ["+", "-", "*", "/", "**"];
+                    operation = ops[Math.floor(Math.random() * ops.length)];
+                    if (operation === "/") {
+                        num1 = num1 - (num1 % num2); // Ensure clean division
+                    }
+                    if (operation === "**") {
+                        num2 = Math.floor(Math.random() * 3) + 2; // Keep exponents reasonable
+                    }
+                }
+
+                if (operation === "**") {
+                    question.innerText = num1 + " ^ " + num2 + " = ?";
+                } else {
+                    question.innerText = num1 + " " + operation + " " + num2 + " = ?";
+                }
+            }
+
+            function checkAnswer() {
+                let answer = document.getElementById("answer").value;
+                let question = document.getElementById("question").innerText;
+                let parts = question.split(" ");
+                let num1 = parseInt(parts[0]);
+                let operation = parts[1];
+                let num2 = parseInt(parts[2]);
+                let correctAnswer;
+
+                if (operation === "^") {
+                    correctAnswer = Math.pow(num1, num2);
+                } else if (operation === "+") {
+                    correctAnswer = num1 + num2;
+                } else if (operation === "-") {
+                    correctAnswer = num1 - num2;
+                } else if (operation === "*") {
+                    correctAnswer = num1 * num2;
+                } else if (operation === "/") {
+                    correctAnswer = num1 / num2;
+                }
+
+                if (answer === correctAnswer.toString()) {
+                    alert("Correct!");
+                } else {
+                    alert("Incorrect. The correct answer is " + correctAnswer + ".");
+                }
+                document.getElementById("answer").value = "";
+                generateQuestion();
+            }
+        </script>
+    </body>
+</html>
